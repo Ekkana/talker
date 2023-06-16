@@ -14,6 +14,11 @@
 		8ABE2AFF2A39C0F4008850CF /* talkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE2AFE2A39C0F4008850CF /* talkerTests.swift */; };
 		8ABE2B092A39C0F4008850CF /* talkerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE2B082A39C0F4008850CF /* talkerUITests.swift */; };
 		8ABE2B0B2A39C0F4008850CF /* talkerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE2B0A2A39C0F4008850CF /* talkerUITestsLaunchTests.swift */; };
+		8ABE2B182A39C3AF008850CF /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE2B172A39C3AF008850CF /* request.swift */; };
+		8ABE2B1A2A39D2F3008850CF /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE2B192A39D2F3008850CF /* SpeechRecognizer.swift */; };
+		8ABE2B1E2A39D67B008850CF /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE2B1D2A39D67B008850CF /* History.swift */; };
+		8ABE2B202A39D6A7008850CF /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE2B1F2A39D6A7008850CF /* HistoryView.swift */; };
+		8ABE2B292A3A2521008850CF /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8ABE2B282A3A2521008850CF /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,13 @@
 		8ABE2B042A39C0F4008850CF /* talkerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = talkerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ABE2B082A39C0F4008850CF /* talkerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = talkerUITests.swift; sourceTree = "<group>"; };
 		8ABE2B0A2A39C0F4008850CF /* talkerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = talkerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8ABE2B172A39C3AF008850CF /* request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
+		8ABE2B192A39D2F3008850CF /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		8ABE2B1D2A39D67B008850CF /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		8ABE2B1F2A39D6A7008850CF /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		8ABE2B2A2A3A2F7B008850CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8ABE2B2B2A3A2F89008850CF /* talker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = talker.entitlements; sourceTree = "<group>"; };
+		8ABE2B2C2A3A3024008850CF /* talker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = talker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ABE2B292A3A2521008850CF /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,7 @@
 		8ABE2AE12A39C0F1008850CF = {
 			isa = PBXGroup;
 			children = (
+				8ABE2B2C2A3A3024008850CF /* talker.entitlements */,
 				8ABE2AEC2A39C0F1008850CF /* talker */,
 				8ABE2AFD2A39C0F4008850CF /* talkerTests */,
 				8ABE2B072A39C0F4008850CF /* talkerUITests */,
@@ -94,10 +108,16 @@
 		8ABE2AEC2A39C0F1008850CF /* talker */ = {
 			isa = PBXGroup;
 			children = (
+				8ABE2B2B2A3A2F89008850CF /* talker.entitlements */,
+				8ABE2B2A2A3A2F7B008850CF /* Info.plist */,
 				8ABE2AED2A39C0F1008850CF /* talkerApp.swift */,
 				8ABE2AEF2A39C0F1008850CF /* ContentView.swift */,
 				8ABE2AF12A39C0F4008850CF /* Assets.xcassets */,
 				8ABE2AF32A39C0F4008850CF /* Preview Content */,
+				8ABE2B172A39C3AF008850CF /* request.swift */,
+				8ABE2B192A39D2F3008850CF /* SpeechRecognizer.swift */,
+				8ABE2B1D2A39D67B008850CF /* History.swift */,
+				8ABE2B1F2A39D6A7008850CF /* HistoryView.swift */,
 			);
 			path = talker;
 			sourceTree = "<group>";
@@ -143,6 +163,9 @@
 			dependencies = (
 			);
 			name = talker;
+			packageProductDependencies = (
+				8ABE2B282A3A2521008850CF /* OpenAISwift */,
+			);
 			productName = talker;
 			productReference = 8ABE2AEA2A39C0F1008850CF /* talker.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +238,9 @@
 				Base,
 			);
 			mainGroup = 8ABE2AE12A39C0F1008850CF;
+			packageReferences = (
+				8ABE2B272A3A2521008850CF /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 8ABE2AEB2A39C0F1008850CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ABE2AF02A39C0F1008850CF /* ContentView.swift in Sources */,
+				8ABE2B202A39D6A7008850CF /* HistoryView.swift in Sources */,
+				8ABE2B1A2A39D2F3008850CF /* SpeechRecognizer.swift in Sources */,
 				8ABE2AEE2A39C0F1008850CF /* talkerApp.swift in Sources */,
+				8ABE2B182A39C3AF008850CF /* request.swift in Sources */,
+				8ABE2B1E2A39D67B008850CF /* History.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,11 +444,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = talker/talker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"talker/Preview Content\"";
+				DEVELOPMENT_TEAM = UDLXG2SKH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = talker/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "You can talk to get transcription and answer";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can read what you say and get answers";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -442,11 +477,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = talker/talker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"talker/Preview Content\"";
+				DEVELOPMENT_TEAM = UDLXG2SKH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = talker/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "You can talk to get transcription and answer";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can read what you say and get answers";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -577,6 +617,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8ABE2B272A3A2521008850CF /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8ABE2B282A3A2521008850CF /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ABE2B272A3A2521008850CF /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8ABE2AE22A39C0F1008850CF /* Project object */;
 }
